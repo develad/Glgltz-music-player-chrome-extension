@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+
+  "name": "Glgltz live player",
+  "description": "This extension is a live radio player of the Glgltz radio station",
+  "version": "1.0.0",
+
+  "background": {
+    "service_worker": "js/background.js",
+    "type": "module"
+  },
+  "action": {},
+  "icons": {
+    "16": "./assets/headphones.png",
+    "48": "./assets/headphones.png",
+    "128": "./assets/headphones.png"
+  }
+}

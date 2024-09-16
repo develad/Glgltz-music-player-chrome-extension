@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  width: 1rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #aaa;
+  border-radius: 99vmax;
+  border: 4px solid #111;
+}
+
+::-webkit-scrollbar-track {
+  background: #111;
+}
+
+body {
+  direction: rtl;
+  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0)),
+    url('./assets/forest.jpg');
+  background-size: 100% 100%;
+
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: 'Rubik', sans-serif;
+  flex-direction: column;
+}
+.songs-outter {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 50px;
+  border: 5px solid white;
+  border-radius: 25px;
+  min-height: 624px;
+  min-width: 400px;
+  position: relative;
+  z-index: 10;
+}
+.songs-outter h1 {
+  margin-bottom: 0.5rem;
+}
+.songs-outter h2 {
+  margin-bottom: 0.5rem;
+  font-size: 1.6rem;
+}
+.song-title {
+  font-size: 2.5rem;
+  color: greenyellow;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  text-align: center;
+  width: 100%;
+}
+
+h2:last-child {
+  margin-bottom: 4rem;
+}
+
+#logo {
+  height: 250px;
+  border-radius: 30px;
+  margin-bottom: 2rem;
+}
+.control-icon {
+  position: absolute;
+  bottom: 30px;
+  left: 50px;
+  font-size: 3.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 100;
+}
+.cont {
+  position: relative;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.9)),
+    url('./assets/galgalz.png');
+  background-size: 100% 100%;
+  border-radius: 25px;
+  overflow: hidden;
+}
+.spin {
+  animation: rotate 0.5s ease;
+}
+
+.radio {
+  position: relative;
+  width: 145px;
+  z-index: 5;
+}
+.radio img {
+  position: absolute;
+  width: 100%;
+  right: 10px;
+
+  opacity: 0.4;
+  animation: 1.5s bounce cubic-bezier(0.22, 0.61, 0.36, 1) infinite alternate;
+}
+
+@keyframes bounce {
+  from {
+    bottom: -400px;
+    filter: blur(4px);
+  }
+  to {
+    bottom: 82px;
+    filter: blur(0px);
+  }
+}
+
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+#equ {
+  height: 3.5rem;
+  position: absolute;
+  bottom: 30px;
+  left: 120px;
+  display: none;
+}
+
+.line {
+  height: 0.5rem;
+  width: 100%;
+  background-color: white;
+  margin: 0.5rem 0;
+}
+
+#spinner {
+  height: 150px;
+  margin-top: 5rem;
+}
+
+.box {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+@media screen and (max-width: 768px) {
+  body {
+    height: 650px;
+    width: 400px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+  }
+  .songs-outter {
+    height: 650px;
+    width: 360px;
+    min-height: auto;
+    min-width: auto;
+    border-radius: 0;
+    align-items: center;
+    text-align: center;
+    border: transparent;
+    min-height: auto;
+    min-width: auto;
+  }
+
+  .songs-outter > span {
+    font-size: 1.8rem;
+  }
+  .songs-outter h2 {
+    font-size: 1.2rem;
+  }
+  .cont {
+    position: relative;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.9)),
+      url('./assets/galgalz.png');
+    background-size: 100% 100%;
+    border-radius: 0px;
+    width: 100%;
+  }
+}
